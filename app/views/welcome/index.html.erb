@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Audit Management</title>
+	<%= javascript_include_tag "application" %>
+	<%= stylesheet_link_tag "application", media: "all"%>
+    <%= csrf_meta_tags %>
+    
+</head>
+<body>
+	<br>
+	<p>
+		<center>
+			<font face="verdana" size="5" color="green">Audit Management
+		    </font>
+		</center>
+	</p>
+	<br>
+	<div class="navbar navbar-default">	
+	<div class="tabbable">	
+	  <ul class="nav nav-pills" class="active">
+         <li><a href="#">Home</a></li>
+         <li><a href="policies">Audit Policy</a></li>
+         <li><a href="#">Department</a></li>
+         <li><a href="#">Devices</a></li>
+         <li><a href="#">Control</a></li>
+         <li><a href="#">Groups</a></li>
+         <li><a href="#">Location</a></li>
+         <li><a href="#">Users</a></li>
+         <li><a href="#" class="btn dropdown-toggle" data-toggle="dropdown">&nbsp;&nbsp;&nbsp;Settings <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                 <li><a href="www.google.com">Google Search</a></li>
+                 <li><a href="www.gmail.com">Gmail</a></li>
+              </ul>
+         </li>
+         <li><a href="#" class="btn dropdown-toggle" data-toggle="dropdown">&nbsp;&nbsp;&nbsp;More <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                 <li><a href="www.google.com">Google Search</a></li>
+                 <li><a href="www.gmail.com">Gmail</a></li>
+              </ul>
+         </li>
+         <li><% if user_signed_in? %><a href="#" class="btn dropdown-toggle" data-toggle="dropdown">  <%= current_user.email %>&nbsp;<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                 <li><%= link_to '<i class= "icon-signout"></i> <span>Sign Out</span>'.html_safe, destroy_user_session_path, :method => :delete %>
+        <% end %></li>
+               
+              </ul>
+         </li>
+         <li>
+        
+        
+        
+      </li>
+    </ul>    
+	</div>
+	</div>
+    
+    </div>
+	
+</body>
+</html>

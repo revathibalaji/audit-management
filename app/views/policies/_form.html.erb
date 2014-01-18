@@ -1,0 +1,42 @@
+<%= render partial: "layouts/header"%>
+<%= form_for(@policy) do |f| %>
+  <% if @policy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@policy.errors.count, "error") %> prohibited this policy from being saved:</h2>
+
+      <ul>
+      <% @policy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+  <div class="span9 offset well">
+  <center><h2>New Policy</h2></center>
+  <div class="field">
+    <%= f.label :policy_name %><br />
+    <%= f.text_field :p_name %>
+  </div>
+  <div class="field">
+    <%= f.label :policy_control %><br />
+    <%= f.text_field :p_control %>
+  </div>
+  <div class="field">
+    <%= f.label :policy_group %><br />
+    <%= f.text_field :p_group %>
+  </div>
+  <div class="field">
+    <%= f.label :policy_scope %><br />
+    <%= f.text_field :p_scope %>
+  </div>
+  <div class="field">
+    <%= f.label :policy_objectives %><br />
+    <%= f.text_field :p_objectives %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  </div>
+</div>
+<% end %>

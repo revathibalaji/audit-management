@@ -1,0 +1,37 @@
+<%= render partial: "layouts/header"%>
+<div class="container">
+<div class="span9 offset well">
+  <p id="notice"><%= notice %></p>
+
+<table border="0">
+  <tr><td><strong>Policy name:</strong></td>  
+   <td><%= @policy.p_name %></td></tr>
+   <tr><td>&nbsp;&nbsp;</td></tr>
+
+<tr><td><strong>P control:</strong></td>
+  <td><%= @policy.p_control %></td></tr>
+  <tr><td>&nbsp;&nbsp;</td></tr>
+
+<tr><td><strong>P group:</strong></td>
+  <td><%= @policy.p_group %></td></tr>
+<tr><td>&nbsp;&nbsp;</td></tr>
+
+<tr><td><strong>P scope:</strong></td>
+  <%= @policy.p_scope %>/td></tr>
+<tr><td>&nbsp;&nbsp;</td></tr>
+
+<tr><td><strong>P objectives:</strong></td>
+  <td><%= @policy.p_objectives %>/td></tr>
+<tr><td>&nbsp;&nbsp;</td></tr>
+</table>
+<p>
+  <b> File attached </b></a>
+  <br/>
+</p>
+
+<%= link_to 'Edit', edit_policy_path(@policy), :class=>"btn btn-info" %>&nbsp;&nbsp;
+<%= link_to "Report", policy_path(@policy, format: "pdf"), :class=>"btn btn-info"%>&nbsp;&nbsp;
+<%= link_to 'Back', policies_path, :class=>"btn btn-info" %>
+</p>
+</div>
+</div></center>

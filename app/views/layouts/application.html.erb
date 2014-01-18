@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audit Management</title>    
+    <link rel="icon" type="image/png" href="/images/favicon.ico">
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "highcharts" %>
+  </head>
+  <body>
+      <!--  <li>
+        <% if user_signed_in? %>
+        Signed in as <%= current_user.email %>. Not you?
+        <%= link_to '<i class= "icon-signout"></i> <span>Sign Out</span>'.html_safe, destroy_user_session_path, :method => :delete %>
+        <% end %>
+      </li> -->
+      <br>
+        <%= yield %>
+</body>
+</html>
+
